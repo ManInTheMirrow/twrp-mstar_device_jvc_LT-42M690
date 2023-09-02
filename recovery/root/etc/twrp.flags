@@ -1,0 +1,35 @@
+/system                   ext4         /dev/block/platform/mstar_mci.0/by-name/system             flags=backup=1;wipeingui;display="System"
+/vendor                   ext4         /dev/block/platform/mstar_mci.0/by-name/vendor             flags=backup=1;wipeingui;display="Vendor"
+
+# Images
+/system_image	          emmc  	   /dev/block/platform/mstar_mci.0/by-name/system             flags=backup=1;flashimg=1;display="System Image"
+/vendor_image	          emmc  	   /dev/block/platform/mstar_mci.0/by-name/vendor             flags=backup=1;flashimg=1;display="Vendor Image"
+/factory_image            emmc         /dev/block/platform/mstar_mci.0/by-name/factory_a          flags=backup=1;flashimg=1;display="Factory Image"
+/tvservice_image          emmc         /dev/block/platform/mstar_mci.0/by-name/tvservice          flags=backup=1;flashimg=1;display="TVService Image"
+/tvconfig_image           emmc         /dev/block/platform/mstar_mci.0/by-name/tvconfig           flags=backup=1;flashimg=1;display="TVConfig Image"
+/tvcertificate_image      emmc         /dev/block/platform/mstar_mci.0/by-name/tvcertificate      flags=backup=1;flashimg=1;display="TVCertificate Image"
+/linux_rootfs_image       emmc         /dev/block/platform/mstar_mci.0/by-name/linux_rootfs_a     flags=backup=1;flashimg=1;display="Linux_rootfs Image"
+/3rd_image                emmc         /dev/block/platform/mstar_mci.0/by-name/3rd_a              flags=backup=1;flashimg=1;display="3rd Image"
+/3rd_rw_image             emmc         /dev/block/platform/mstar_mci.0/by-name/3rd_rw             flags=backup=1;flashimg=1;display="3rd_rw Image"
+
+# Common partitions
+/cache              ext4         /dev/block/platform/mstar_mci.0/by-name/cache              flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
+/vbmeta             emmc         /dev/block/platform/mstar_mci.0/by-name/vbmeta             flags=display="VBMeta";backupname="VBMeta";backup=1;flashimg=1
+/recovery           emmc         /dev/block/platform/mstar_mci.0/by-name/recovery           flags=display="Recovery";backup=1;flashimg=1
+/boot               emmc         /dev/block/platform/mstar_mci.0/by-name/boot               flags=display="Boot";backup=1;flashimg=1
+/dtb                emmc         /dev/block/platform/mstar_mci.0/by-name/dtb                flags=display="DTB";backupname="DTB";backup=1;flashimg=1
+/dtbo               emmc         /dev/block/platform/mstar_mci.0/by-name/dtbo               flags=display="DTBO";backupname="DTBO";backup=1;flashimg=1
+
+# MediaTek and MStar partitions
+/factory            ext4         /dev/block/platform/mstar_mci.0/by-name/factory_a          flags=display="Factory";backup=1
+/tvservice          ext4         /dev/block/platform/mstar_mci.0/by-name/tvservice          flags=display="TVService";backup=1
+/tvconfig           ext4         /dev/block/platform/mstar_mci.0/by-name/tvconfig           flags=display="TVConfig";backup=1
+/tvcertificate      ext4         /dev/block/platform/mstar_mci.0/by-name/tvcertificate      flags=display="TVCertificate";backup=1
+/linux_rootfs       squashfs     /dev/block/platform/mstar_mci.0/by-name/linux_rootfs_a     flags=display="Linux_rootfs";backup=1
+/3rd                squashfs     /dev/block/platform/mstar_mci.0/by-name/3rd_a              flags=display="3rd";backup=1
+/3rd_rw             ext4         /dev/block/platform/mstar_mci.0/by-name/3rd_rw             flags=display="3rd_rw";backup=1
+/misc               emmc         /dev/block/platform/mstar_mci.0/by-name/misc               flags=display="Misc";backupname="Misc";backup=1
+/RTPM               emmc         /dev/block/platform/mstar_mci.0/by-name/RTPM               flags=display="RTPM";backup=1
+/optee              emmc         /dev/block/platform/mstar_mci.0/by-name/optee              flags=display="Optee";backupname="Optee";backup=1
+/armfw              emmc         /dev/block/platform/mstar_mci.0/by-name/armfw              flags=display="Armfw";backupname="Armfw";backup=1
+/frc                emmc         /dev/block/platform/mstar_mci.0/by-name/frc                flags=display="Frc";backupname="Frc";backup=1
